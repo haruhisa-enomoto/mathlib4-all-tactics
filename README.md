@@ -15,5 +15,5 @@ import Mathlib.Tactic
 Defined in: `$2`
 
 ```
-5. Delete `^  ` (regex).
-6. Manually fix some tactics.
+4. Delete `^  ` (regex).
+5. Manually fix some tactics.
