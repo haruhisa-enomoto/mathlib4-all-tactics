@@ -1,5 +1,6 @@
 # All tactics in mathlib4
-[Markdown file](all-tactics.md)
+[**all-tactics.md**](all-tactics.md)
+
 mathlib4 rev: c161d1800ce3788307e2d726b7a265549a1c04d7 (2023-09-06)
 
 # How to obtain this?
