@@ -18,3 +18,6 @@ Defined in: `$2`
 ```
 4. Delete `^  ` (regex).
 5. Manually fix some tactics.
+
+c.f.
+[Zulip chat](https://leanprover.zulipchat.com/#narrow/stream/287929-mathlib4/topic/Mathlib4.20tactics.20list.3F/near/389326957)
