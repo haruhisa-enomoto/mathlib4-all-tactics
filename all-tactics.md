@@ -220,16 +220,16 @@ Defined in: `Aesop.BuiltinRules.tacticAesop_split_hyps`
 
 
 # aesop_subst
-Defined in: `Aesop.BuiltinRules.«tacticAesop_subst[_,,`
-»]
+Defined in: `Aesop.BuiltinRules.«tacticAesop_subst[_,,]»`
+
 
 # aesop_subst
 Defined in: `Aesop.BuiltinRules.tacticAesop_subst_`
 
 
 # aesop_unfold
-Defined in: `Aesop.«tacticAesop_unfold[_,,`
-»]
+Defined in: `Aesop.«tacticAesop_unfold[_,,]»`
+
 
 # all_goals
 Defined in: `Lean.Parser.Tactic.allGoals`
@@ -2407,8 +2407,8 @@ example (a b : ℚ) (h : ∀ p q : ℚ, p = q) : 3*a + qc = 3*b + 2*qc := by
 ```
 
 # map_tacs
-Defined in: `Std.Tactic.«tacticMap_tacs[_;`
-»]
+Defined in: `Std.Tactic.«tacticMap_tacs[_;]»`
+
 Assuming there are `n` goals, `map_tacs [t1; t2; ...; tn]` applies each `ti` to the respective
 goal and leaves the resulting subgoals.
 
@@ -2687,8 +2687,8 @@ Defined in: `Mathlib.Tactic.«tacticPick_goal-_»`
 See also `Tactic.rotate_goals`, which moves goals from the front to the back and vice-versa.
 
 # polyrith
-Defined in: `Mathlib.Tactic.Polyrith.«tacticPolyrithOnly[_`
-»]
+Defined in: `Mathlib.Tactic.Polyrith.«tacticPolyrithOnly[_]»`
+
 Attempts to prove polynomial equality goals through polynomial arithmetic
 on the hypotheses (and additional proof terms if the user specifies them).
 It proves the goal by generating an appropriate call to the tactic
@@ -2928,8 +2928,8 @@ Defined in: `Lean.Parser.Tactic.tacticRefine_lift'_`
 Similar to `refine_lift`, but using `refine'`
 
 # rel
-Defined in: `Mathlib.Tactic.GCongr.«tacticRel[_`
-»]
+Defined in: `Mathlib.Tactic.GCongr.«tacticRel[_]»`
+
 The `rel` tactic applies "generalized congruence" rules to solve a relational goal by
 "substitution".  For example,
 ```
@@ -4245,6 +4245,7 @@ doing a pattern match. This is equivalent to `fun` with match arms in term mode.
 
 # match
 Defined in: `Lean.Parser.Tactic.match`
+
 `match` performs case analysis on one or more expressions.
 See [Induction and Recursion][tpil4].
 The syntax for the `match` tactic is the same as term-mode `match`, except that
@@ -4274,7 +4275,7 @@ large computations this is one way to run external programs and trust the result
 example : (List.range 1000).length = 1000 := by native_decide
 ```
 
-# open 
+# open
 Defined in: `Lean.Parser.Tactic.open`
 
 `open Foo in tacs` (the tactic) acts like `open Foo` at command level,
@@ -4286,13 +4287,11 @@ Defined in: `Lean.Parser.Tactic.set_option`
 `set_option opt val in tacs` (the tactic) acts like `set_option opt val` at the command level,
 but it sets the option only within the tactics `tacs`.
 
-# tac <;> tac'
+# tac <;> tac
 Defined in: `Lean.Parser.Tactic.«tactic_<;>_»`
+
 `tac <;> tac'` runs `tac` on the main goal and `tac'` on each produced goal,
 concatenating all goals produced by `tac'`.
-
-# says
-Defined in: `Mathlib.Tactic.Says.says`
 
 # t <;> [t1; t2; ...; tn]
 Defined in: `Std.Tactic.seq_focus`
@@ -4302,9 +4301,13 @@ subgoals. It then applies each `ti` to the corresponding goal and collects the r
 subgoals.
 
 # ·
+Defined in: `cdot`
+
 `· tac` focuses on the main goal and tries to solve it using `tac`, or else fails.
 
 # if h : t then tac1 else tac2
+Defined in: `tacDepIfThenElse`
+
 In tactic mode, `if h : t then tac1 else tac2` can be used as alternative syntax for:
 ```
 by_cases h : t
@@ -4318,6 +4321,8 @@ if a tactic sequence is provided for `tac1` or `tac2` then it will require the g
 by the end of the block.
 
 # if t then tac1 else tac2
+Defined in: `tacIfThenElse`
+
 In tactic mode, `if t then tac1 else tac2` is alternative syntax for:
 ```
 by_cases t

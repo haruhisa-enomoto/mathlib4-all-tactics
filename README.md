@@ -9,7 +9,7 @@ mathlib4 rev: c161d1800ce3788307e2d726b7a265549a1c04d7 (2023-09-06)
 import Mathlib.Tactic
 #help tactic
 ```
-3. Replace `syntax "(.*?)".*? \[(.*?)\]` (regex) with:
+3. Replace `syntax "(.*?)".*?\[(.*)\]` (regex) with:
 ```
 # $1
 Defined in: `$2`
