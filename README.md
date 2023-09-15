@@ -6,7 +6,7 @@ mathlib4 rev: c161d1800ce3788307e2d726b7a265549a1c04d7 (2023-09-06)
 # How to obtain this?
 1. Make a new Lean 4 project with mathlib4 (using `lake new project_name math`)
 2. The following codes yields the docstrings of all mathlib4 tactics in *Message* in line 2, so copy and paste it in a new markdown file.
-```
+```lean
 import Mathlib.Tactic
 #help tactic
 ```
