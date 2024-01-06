@@ -3302,6 +3302,25 @@ this combinator explicitly.)
 # set
 Defined in: `Mathlib.Tactic.setTactic`
 
+`set a := t with h` is a variant of `let a := t`. It adds the hypothesis `h : a = t` to
+the local context and replaces `t` with `a` everywhere it can.
+
+`set a := t with ← h` will add `h : t = a` instead.
+
+`set! a := t with h` does not do any replacing.
+
+```lean
+example (x : Nat) (h : x + x - x = 3) : x + x - x = 3 := by
+  set y := x with ← h2
+  sorry
+/-
+x : Nat
+y : Nat := x
+h : y + y - y = 3
+h2 : x = y
+⊢ y + y - y = 3
+-/
+```
 
 # set!
 Defined in: `Mathlib.Tactic.tacticSet!_`
